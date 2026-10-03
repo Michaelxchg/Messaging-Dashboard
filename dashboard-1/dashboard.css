@@ -1,0 +1,567 @@
+*{
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+svg{
+    width: 20px;
+    height: 20px;
+}
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+      "header header"
+       "aside main"
+    ;
+    grid-template-rows: 60px 1fr;
+    width: 100%;
+}
+
+.dashboard header{
+    grid-area: header;
+    background-color: rgb(52, 140, 212);
+    padding: 0 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard header .header-rows{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(52, 140, 212);
+    padding: 10px 0;
+    align-items: center;
+    
+}
+.dashboard header .header-rows .header-col{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+}
+.dashboard header .header-rows .header-col svg{
+    fill: white;
+}
+.dashboard header .header-rows .header-col .search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    padding: 5px 50px 5px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: rgb(73, 152, 216);
+    color: white;
+    text-transform: capitalize;
+    cursor: text;
+}
+
+.dashboard header .header-rows .header-col .search-btn svg{
+    fill: white;
+}
+
+.dashboard header .header-rows .header-col .view{
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+
+}
+
+.dashboard header .header-rows .header-col .flag{
+    width: 20px;
+    height: 20px;
+}
+.dashboard header .header-rows .header-col .flag img{
+    width: 100%;
+    height: 100%;
+}
+.dashboard header .header-rows .header-col .profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.dashboard header .header-rows .header-col .profile img{
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard aside{
+    grid-area: aside;
+    background-color: rgb(37, 38, 48);
+    height: 750px;
+}
+
+.dashboard aside .sidebar{
+    padding: 50px 10px 10px 10px;
+}
+
+.dashboard aside .sidebar .sidebar-items{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.dashboard aside .sidebar .sidebar-items .navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    color: rgb(97, 130, 168);
+}
+.dashboard aside .sidebar .sidebar-items .navigation svg{
+    fill:  rgb(97, 130, 168);
+}
+.dashboard aside .sidebar .sidebar-items .inner-nav{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dashboard aside .sidebar .sidebar-items .messages{
+    display: flex;
+    gap: 10px;
+    text-transform: capitalize;
+}
+.dashboard aside .sidebar .sidebar-items .inner-nav .messages-1{
+    color: white;
+}
+.dashboard aside .sidebar .sidebar-items .inner-nav .messages-2{
+    color: rgb(97, 130, 168);
+}
+.dashboard aside .sidebar .sidebar-items .inner-nav .messages-2 svg{
+    fill: rgb(97, 130, 168);
+}
+.dashboard aside .seo{
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    text-transform: uppercase;
+    color: rgb(97, 130, 168);
+}
+.dashboard aside .seo .cms{
+    display: flex;
+    justify-content: space-between;
+}
+.dashboard aside .seo .cms span svg{
+    fill: rgb(97, 130, 168);
+    cursor: pointer;
+}
+.dashboard aside .settings{
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: rgb(97, 130, 168);
+}
+.dashboard aside .settings svg{
+    fill:  rgb(97, 130, 168);
+    cursor: pointer;
+}
+.dashboard aside .inner-nav{
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dashboard aside .inner-nav .messages{
+    display: flex;
+    gap: 10px;
+    text-transform: capitalize;
+    color: rgb(97, 130, 168);
+    cursor: pointer;
+}
+.dashboard aside .inner-nav .messages svg{
+    fill:  rgb(97, 130, 168);
+}
+.dashboard aside .inner-nav .messages .profile{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(97, 130, 168);
+}
+.dashboard aside .inner-nav .messages .profile img{
+    width: 100%;
+    height: 100%;
+}
+.dashboard aside .inner-nav .sign-out{
+    color: red;
+}
+.dashboard aside .inner-nav .sign-out svg{
+    fill: red;
+    cursor: pointer;
+}
+.aside-line{
+    display: inline-flex;
+    width: 100%;
+    height: 0.7px;
+    background-color: rgb(62, 63, 71);
+    margin-top: 296px;
+}
+
+.dashboard main{
+    grid-area: main;
+    background-color: rgb(235, 235, 235);
+}
+
+.dashboard main .dashboard-main{
+    background-color: white;
+    padding: 15px;
+    text-transform: capitalize;
+    color: rgb(70, 70, 86);
+}
+
+.dashboard main .dashboard-message .message{
+    padding: 20px;
+}
+.dashboard main .dashboard-message .message .message-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+
+}
+.message-col:nth-child(1){
+    background-color: white;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    border-radius: 5px;
+    
+} 
+.message-header-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+.message-header-row span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(52, 140, 212);
+}
+.message-header-row span svg{
+    fill: white;
+
+}
+.message-header{
+    text-transform: capitalize;
+    color: rgb(91, 91, 106);
+}
+.message-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.sender-feed{
+    display: flex;
+    gap: 20px;
+}
+.sender-profile{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: chartreuse; */
+}
+.sender-profile img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.name{
+    font-weight: 600;
+    color: rgb(92, 92, 107);
+}
+.time{
+    color: rgb(191, 191, 197);
+}
+.message-feed p{
+    text-transform: capitalize;
+    color: rgb(118, 118, 130);
+}
+.line{
+    display: flex;
+    width: 93%;
+    height: 0.7px;
+    background-color: rgb(233, 234, 236);
+    margin: 5px 15px;
+    justify-content: center;
+    align-items: center;
+}
+.view-all{
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    text-transform: capitalize;
+    color: rgb(111, 174, 225);
+    padding: 7px 0 25px 0;
+}
+.message-col:nth-child(2) {
+    grid-row: 1/3;
+    background-color: white;
+    border-radius: 5px;
+
+}
+.recent-update{
+    padding: 20px;
+}
+.recent-update-header{
+    display: flex;
+    justify-content: space-between;
+}
+.recent-update-header span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: orange;
+}
+.recent-update-header span svg{
+    fill: white;
+    
+}
+.update-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  10px 15px;
+    color: rgb(118, 118, 130);
+}
+.update-content p{
+    text-transform: capitalize;
+}
+.update-content span svg{
+    fill: rgb(76, 76, 92);
+}
+
+.message-col:nth-child(3){
+    background-color: white;
+    border-radius: 5px;
+}
+.visitors-today{
+    padding: 20px;
+}
+.visitors-today-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.visitors-today-header span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgb(147, 104, 243);
+}
+.visitors-today-header span svg{
+    fill: white;
+}
+.visitors-today-content{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.visitors-figure{
+    font-size: 35px;
+    color: rgb(96, 96, 110);
+}
+.visitor-info{
+    text-transform: capitalize;
+    line-height: 1.5;
+    color: rgb(106, 106, 120);
+}
+.number{
+    color: rgb(98, 206, 169);
+}
+.message-col:nth-child(4){
+    background-color: white;
+    border-radius: 5px;
+}
+.quick-actions{
+    display: flex;
+    gap: 10px;
+    text-transform: capitalize;
+    color: rgb(70, 70, 86);
+    padding: 20px 20px;
+}
+.quick-actions span svg{
+    fill: red;
+}
+.quick-actions-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+.quick-actions-container{
+    height: 90px;
+    background-color: white;
+    box-shadow: 2px 2px 10px rgba(33, 25, 25, 0.459) ;
+    border-radius: 5px;
+}
+.quick-action-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 7px;
+    text-transform: capitalize;
+    color:  rgb(70, 70, 86);
+}
+.quick-action-content span svg{
+    width: 40px;
+    height: 40px;
+    fill:  rgb(70, 70, 86);
+}
+.footer{
+    background-color: white;
+    margin-top: 32px;
+}
+.footer-row{
+    display: flex;
+   justify-content: space-between;
+   padding: 15px;
+   color: rgb(70, 70, 86);
+   font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+.dashboard{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-areas: 
+      "header header"
+       "aside main"
+    ;
+    grid-template-rows: 60px 1fr;
+}
+
+.dashboard aside .sidebar{
+    padding: unset;
+}
+
+@media (max-width: 1200px) {
+    .visitors-today{
+        display: none;
+    }
+
+    .dashboard main .dashboard-message .message .message-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+
+}
+
+
+.dashboard header .header-rows .header-col .view{
+    display: none;
+
+}
+
+.dashboard header .header-rows .header-col .flag{
+    display: none;
+}
+
+.notification{
+    display: none;
+}
+}
+
+@media (max-width: 900px) {
+    
+.dashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header header"
+       "main"
+    ;
+    grid-template-rows: 60px 1fr;
+    width: 100%;
+}
+
+.dashboard aside{
+    display: none;
+    visibility: hidden;
+}
+
+.dashboard aside .sidebar{
+    padding: unset;
+}
+
+.dashboard main{
+    width: 860px;
+}
+}
+
+@media (max-width: 500px) {
+
+   .dashboard main .dashboard-message .message .message-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 830px;
+
+}
+
+.message-col:nth-child(1){
+    grid-column: 1/6;
+    grid-row: 1/4;
+    border-radius: 5px;
+} 
+
+.update{
+    display: none;
+}
+
+.quick-actions-row{
+  grid-template-columns: 1fr;
+}
+
+header{
+    width: 450px;
+}
+
+.dashboard header .header-rows .header-col .search-btn{
+    display: none;
+}
+
+.dashboard main{
+    width: 450px;
+}
+
+.dashboard main .dashboard-message .message .message-row{
+   width: unset;
+}
+
+.remark{
+    width: 200px;
+    display: block;
+}
+}
+
+
+
